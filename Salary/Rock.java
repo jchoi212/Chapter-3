@@ -21,8 +21,11 @@ public class Rock
         //Generate computer's play (0,1,2)
         botPlay();
         //Translate computer's randomly generated play to string
+        
         //Print computer's play
+        
         //See who won.
+        winner();
     }
     public void userPlay() {
         System.out.println("Choose from 'R' for Rock, 'P' for Paper and 'S' for Stone");
@@ -46,5 +49,19 @@ public class Rock
                computerPlay = ("S");
             }
             System.out.println(computerPlay);
+    }
+    public void winner() {
+        if (computerPlay.equals ("R") & personPlay.equals ("S")){
+            System.out.println("The computer won");
+        }
+        else if (computerPlay.equals ("S") & personPlay.equals ("P")){
+            System.out.println("The computer won");
+        }
+        else if (computerPlay.equals ("P") & personPlay.equals ("R")){
+            System.out.println("The computer won");
+        }
+        else {
+            System.out.println("You won");
+        }
     }
 }
